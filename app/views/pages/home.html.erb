@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% content_for :banner do %>
+  <%= render '/shared/banner' %>
+<% end %>
+
+<div class="row">
+  <div class="col-6 text-center">
+    <% @spaceships.each do |item| %>
+      <div class="card text-white mb-3">
+        <% if item.image.attached? %>
+          <%= cl_image_tag(item.image.key, crop: :fill, class: "card-img card-item-img") %>
+        <% end %>
+        <div class="card-img-overlay" >
+          <h5 class="card-title"><%= link_to item.name, item_path(item), class: "btn btn-light text-center" %></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
