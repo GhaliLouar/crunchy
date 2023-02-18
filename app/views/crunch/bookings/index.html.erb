@@ -1,0 +1,23 @@
+<%= link_to "Back to home", root_path, class: "btn btn-outline-danger mb-3" %>
+<h1>My Bookings</h1>
+<div class="row">
+  <% @bookings.each do |booking| %>
+    <div class="col-4 d-flex align-items-stretch">
+      <div class="card mb-3">
+        <%= cl_image_tag(booking.burger.image.key, crop: :fill, class: "card-img-top") %>
+        <div class="card-body">
+          <h3 class="card-title">
+            <%= link_to "#{booking.burger.name}", burger_path(booking.burger), class: "link-secondary" %>
+          </h3>
+          <p class="card-text"><%= booking.burger.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Booking n° <%= booking.id %></strong></li>
+          <li class="list-group-item">Start <strong><%= booking.startbook_time %></strong></li>
+          <li class="list-group-item">End <strong><%= booking.endbook_time %></strong></li>
+          <li class="list-group-item">Price <strong><%= booking.burger.price * %> EUR </strong></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

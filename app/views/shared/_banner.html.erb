@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.afcdn.com/recipe/20190206/87301_w1024h768c1cx2213cy1453.webp);">
+  <div class="container">
+    <h1 class="text-white">CRUNCHY</h1>
+    <h4 class="text-white">Order the best burgers</h4>
+    <h6 class="text-white">
+      Explore our menu for the best burgers you will eat
+    </h6>
+    <p class="typed mt-5" data-controller="typed"></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 ps-0">
+          <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a Burger"
+            %>
+            <%= submit_tag "Search", class: "btn btn-dark text-white" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
