@@ -5,9 +5,10 @@
 }
 
 .banner h1 {
-  margin: 0;
+text-align: center;
+  margin: auto;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgb(242, 237, 237);
   font-size: 32px;
   font-weight: bold;
 }
@@ -16,5 +17,15 @@
   font-size: 20px;
   color: white;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+.btn-flat {
+  margin: auto;
+  display: flex;
+  width: 132px;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #000000;
+  transition: background 0.3s ease;
 }

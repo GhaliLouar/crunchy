@@ -1,17 +1,40 @@
-<% content_for :banner do %>
-  <%= render '/shared/banner' %>
-<% end %>
-
-<div class="row">
-  <div class="col-6 text-center">
-    <% @spaceships.each do |item| %>
-      <div class="card text-white mb-3">
-        <% if item.image.attached? %>
-          <%= cl_image_tag(item.image.key, crop: :fill, class: "card-img card-item-img") %>
-        <% end %>
-        <div class="card-img-overlay" >
-          <h5 class="card-title"><%= link_to item.name, item_path(item), class: "btn btn-light text-center" %></h5>
-        </div>
-      </div>
-    <% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.remsburgers.fr/modules/slideshow/images/1/s1-large.jpg);">
+  <div class="container">
+    <h1>CRUNCHY THE SOUND <strong>AND THE TASTE</strong> OF <strong>HAPINESS</strong>!</h1>
+    <a class="btn btn-flat" href="#">Order now</a>
   </div>
+</div>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="" />
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://previews.123rf.com/images/pixdesign123/pixdesign1231408/pixdesign123140801287/31140977-illustration-de-caractère-blanc-comme-un-chef-avec-hamburger.jpg" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="https://blog.flunch.fr/wp-content/uploads/2022/10/burger-600x400.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
